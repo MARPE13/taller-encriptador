@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador | OracleONE+aluraLATAM</title>
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="header_img">
+                <img src="./img/logo_a.svg" alt="letra a de alura">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="contenedor">
+            <section class="encriptador">
+                <form class="encriptador_form" aria-label="Formulario para encriptar">
+                    <div class="text_in">
+                        <label for="texto" class="sr-only"></label>
+                        <textarea name="text_in_area" id="texto" placeholder="Ingrese el texto aquí" required aria-describedby="warning"></textarea>
+                        <div class="text_in_info">
+                            <div class="info">
+                                <img src="./img/imgexclamacion.svg" alt="advertencia">
+                                <p id="warning">Puedes encriptar frases en minúsculas y/o mayúsculas sin caracteres</p>
+                            </div>
+                            <div class="text_in_btns">
+                                <input id="enc" type="button" value="Encriptar" aria-label="Botón que encriptar el texto">
+                                <input id="des" type="button" value="Desencriptar" aria-label="Botón que desencriptar el texto">
+                                <input id="borrar" type="button" value="BorrarTexto" aria-label="Botón borrar texto">
+                            </div> 
+                        </div>
+                    </div>
+                </form>
+
+                <section class="text_out_sec" aria-label="Sección de resultados">
+                    <div class="out_content">
+                        <div class="content" id="default" aria-hidden="false">
+                            <div class="text_out_img">
+                                <img src="./img/crypt.svg" alt="Imagen animada de encriptación">
+                            </div>
+                            <p>De momento no se a ingresado ningun texto </p>
+                        
+                        </div>
+                        <div class="content invisible" id="result" aria-hidden="true">
+                            <label for="texto_out" class="sr-only"></label>
+                            <textarea name="text_out_area" id="texto_out" readonly></textarea>
+                            <button id="copiar" aria-label="Botón para copiar el texto">Copiar</button>
+                        </div>
+                    </div>  
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script src="./js/cod_encriptador.js"></script>
+</html>
